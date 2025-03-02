@@ -38,15 +38,15 @@ const features: FeatureProps[] = [
 ];
 
 const featureList: string[] = [
-  "Dark/Light theme",
-  "Reviews",
-  "Features",
-  "Pricing",
-  "Contact form",
-  "Our team",
-  "Responsive design",
-  "Newsletter",
-  "Minimalist",
+  "Java",
+  "Python",
+  "Javascript",
+  "Spring",
+  "Spring Boot",
+  "Django",
+  "React.js",
+  "Git",
+  "Jira",
 ];
 
 export const Features = () => {
@@ -56,10 +56,7 @@ export const Features = () => {
       className="container py-24 sm:py-32 space-y-8"
     >
       <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        Many{" "}
-        <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-          Great Features
-        </span>
+        My Skills
       </h2>
 
       <div className="flex flex-wrap md:justify-center gap-4">
@@ -74,8 +71,8 @@ export const Features = () => {
           </div>
         ))}
       </div>
-
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Beautiful Card */}
+      {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {features.map(({ title, description, image }: FeatureProps) => (
           <Card key={title}>
             <CardHeader>
@@ -93,7 +90,7 @@ export const Features = () => {
             </CardFooter>
           </Card>
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };

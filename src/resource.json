@@ -5,12 +5,13 @@
                 "home": "Home",
                 "blog": "Blog",
                 "about": "About Me",
-                "projects": "Projects"
+                "contact": "Contact Me"
             }
         },
         "hero": {
             "contact_btn": "Contact Me",
-            "hire_btn": "Hire Me"
+            "hire_btn": "Hire Me",
+            "about_btn": "About Me"
         },
         "contact": {
             "title": "Get in Touch",
@@ -29,12 +30,13 @@
                 "home": "خانه",
                 "blog": "بلاگ",
                 "about": "درباره‌ی من",
-                "projects": "پروژه‌ها"
+                "contact": "ارتباط با من"
             }
         },
         "hero": {
             "contact_btn": "ارتباط با من",
-            "hire_btn": "به من پروژه بده!"
+            "hire_btn": "به من پروژه بده!",
+            "about_btn": "درباره‌ی من"
         },
         "contact": {
             "title": "ارتباط با من",

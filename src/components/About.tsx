@@ -17,17 +17,11 @@ export const About = () => {
           <div className="bg-green-0 flex flex-col justify-between">
             <div className="pb-6">
               <h2 className="text-3xl md:text-4xl font-bold">
-                <span className="bg-gradient-to-b from-primary/60 to-primary text-transparent bg-clip-text">
-                  About{" "}
-                </span>
-                Company
+                About Me
               </h2>
               <p className="text-xl text-muted-foreground mt-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit
-                amet, consectetur adipiscing elit.
+                I am a final-semester Computer Engineering student at Sharif University of Technology, currently working as a Backend Developer in the ATM team at TOSAN. Through this role, I have gained valuable experience in teamwork, scrum-based project management, and have developed proficiency in Java and the Spring framework. I am actively expanding my skill set by learning Frontend technologies, with the goal of becoming a Full Stack Developer. My passion for technology extends beyond coding; I have a strong interest in product management and digital product design. I am eager to pursue an internship in product management to gain hands-on experience and contribute to impactful projects within the software industry.
+                I am currently converting some of my ideas into software projects, which I store in my GitHub account. I also push my learning code into the "Learn" repositories I have created.
               </p>
             </div>
 

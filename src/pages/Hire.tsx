@@ -3,7 +3,7 @@ import { Navbar } from "../components/Navbar";
 import { ScrollToTop } from "../components/ScrollToTop";
 import { Newsletter } from "../components/Newsletter";
 
-function Blog() {
+function Hire() {
     return (
         <>
             <Navbar />
@@ -14,4 +14,4 @@ function Blog() {
     );
 }
 
-export default Blog;
+export default Hire;
