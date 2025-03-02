@@ -22,7 +22,7 @@ export const HeroCards = () => {
           <Avatar>
             <AvatarImage
               alt=""
-              src="https://github.com/shadcn.png"
+              src="https://github.com/Fonij80"
             />
             <AvatarFallback>SH</AvatarFallback>
           </Avatar>
@@ -61,7 +61,7 @@ export const HeroCards = () => {
           <div>
             <a
               rel="noreferrer noopener"
-              href="https://github.com/leoMirandaa"
+              href="https://github.com/Fonij80"
               target="_blank"
               className={buttonVariants({
                 variant: "ghost",
@@ -94,7 +94,7 @@ export const HeroCards = () => {
 
             <a
               rel="noreferrer noopener"
-              href="https://www.linkedin.com/in/leopoldo-miranda/"
+              href="https://www.linkedin.com/in/foroozan-iraji/"
               target="_blank"
               className={buttonVariants({
                 variant: "ghost",
