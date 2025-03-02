@@ -1,0 +1,22 @@
+{
+    "en": {
+        "navbar": {
+            "links": {
+                "home": "Home",
+                "blog": "Blog",
+                "about": "About Me",
+                "projects": "Projects"
+            }
+        }
+    },
+    "fa": {
+        "navbar": {
+            "links": {
+                "home": "خانه",
+                "blog": "بلاگ",
+                "about": "درباره‌ی من",
+                "projects": "پروژه‌ها"
+            }
+        }
+    }
+}

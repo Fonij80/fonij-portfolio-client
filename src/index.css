@@ -7,7 +7,7 @@ html {
   position: absolute;
   background: hsl(var(--primary) / 0%);
   border-radius: 24px;
-  rotate: 35deg;
+  rotate: 90deg;
   z-index: -1;
   width: 260px;
   top: 200px;
@@ -22,6 +22,7 @@ html {
     background: hsl(var(--primary) / 20%);
     right: 460px;
   }
+
   to {
     background: hsl(var(--primary) / 80%);
     right: 160px;
@@ -38,6 +39,7 @@ html {
       background: hsl(var(--primary) / 20%);
       right: 460px;
     }
+
     to {
       background: hsl(var(--primary) / 50%);
       right: 160px;
@@ -58,6 +60,7 @@ html {
       background: hsl(var(--primary) / 20%);
       right: 280px;
     }
+
     to {
       background: hsl(var(--primary) / 30%);
       right: 100px;

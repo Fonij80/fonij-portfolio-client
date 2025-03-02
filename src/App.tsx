@@ -1,41 +1,20 @@
-import { About } from "./components/About";
-import { Cta } from "./components/Cta";
-import { FAQ } from "./components/FAQ";
-import { Features } from "./components/Features";
-import { Footer } from "./components/Footer";
-import { Hero } from "./components/Hero";
-import { HowItWorks } from "./components/HowItWorks";
-import { Navbar } from "./components/Navbar";
-import { Newsletter } from "./components/Newsletter";
-import { Pricing } from "./components/Pricing";
-import { ScrollToTop } from "./components/ScrollToTop";
-import { Services } from "./components/Services";
-import { Sponsors } from "./components/Sponsors";
-import { Team } from "./components/Team";
-import { Testimonials } from "./components/Testimonials";
-import { Contact } from "./components/Contact";
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n';
 import "./App.css";
+import { Home, Blog } from './pages';
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Hero />
-      <Sponsors />
-      <About />
-      <HowItWorks />
-      <Features />
-      <Services />
-      <Cta />
-      <Testimonials />
-      <Team />
-      <Pricing />
-      <Newsletter />
-      <FAQ />
-      <Contact />
-      <Footer />
-      <ScrollToTop />
-    </>
+    <I18nextProvider i18n={i18n}>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/hire" element={<Blog />} />
+        </Routes>
+      </Router>
+    </I18nextProvider>
   );
 }
 

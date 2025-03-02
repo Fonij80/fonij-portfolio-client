@@ -1,8 +1,7 @@
 import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import myImage from '../assets/Me.jpg';
-
+import myImage from '../assets/Me.png';
 
 export const Hero = () => {
   return (
@@ -31,23 +30,13 @@ export const Hero = () => {
         <div className="space-y-4 md:space-y-0 md:space-x-4">
           <Button className="w-full md:w-1/3">Hire Me</Button>
 
-          <a
-            rel="noreferrer noopener"
-            href="https://github.com/Fonij80"
-            target="_blank"
-            className={`w-full md:w-1/3 ${buttonVariants({
-              variant: "outline",
-            })}`}
-          >
-            Github Repository
-            <GitHubLogoIcon className="ml-2 w-5 h-5" />
-          </a>
+          <Button className="w-full md:w-1/3">Contact Me</Button>
         </div>
       </div>
 
       {/* Profile Picture in a Circle */}
       <div className="z-10">
-        <div className="rounded-full overflow-hidden shadow-lg w-80 h-80">
+        <div className="rounded-full overflow-hidden shadow-lg w-96 h-160">
           <img
             src={myImage}
             alt="Foroozan Iraji"
