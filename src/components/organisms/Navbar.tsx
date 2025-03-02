@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuItem,
@@ -79,15 +80,20 @@ export const Navbar = () => {
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
                   {routeList.map(({ href, labelKey }: RouteProps) => (
-                    <a
-                      rel="noreferrer noopener"
+                    <NavLink
                       key={labelKey}
-                      href={href}
+                      to={href}
                       onClick={() => setIsOpen(false)}
-                      className={buttonVariants({ variant: "ghost" })}
+                      className={({ isActive }) =>
+                        isActive
+                          ? `${buttonVariants({
+                            variant: "ghost",
+                          })} text-seondary-500 border-b-2 border-seondary-500`
+                          : `${buttonVariants({ variant: "ghost" })}`
+                      }
                     >
                       {t(`navbar.links.${labelKey}`)}
-                    </a>
+                    </NavLink>
                   ))}
                   <a
                     rel="noreferrer noopener"
@@ -107,17 +113,20 @@ export const Navbar = () => {
 
           {/* desktop */}
           <nav className="hidden md:flex gap-2">
-            {routeList.map((route: RouteProps, i) => (
-              <a
-                rel="noreferrer noopener"
-                href={route.href}
-                key={i}
-                className={`text-[17px] ${buttonVariants({
-                  variant: "ghost",
-                })}`}
+            {routeList.map(({ href, labelKey }: RouteProps) => (
+              <NavLink
+                key={labelKey}
+                to={href}
+                className={({ isActive }) =>
+                  isActive
+                    ? `text-[17px] ${buttonVariants({
+                      variant: "ghost",
+                    })} text-seondary-500 border-b-2 border-seondary-500`
+                    : `text-[17px] ${buttonVariants({ variant: "ghost" })}`
+                }
               >
-                {t(`navbar.links.${route.labelKey}`)}
-              </a>
+                {t(`navbar.links.${labelKey}`)}
+              </NavLink>
             ))}
           </nav>
 
