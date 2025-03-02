@@ -1,5 +1,5 @@
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
+import { Button } from "../atoms/button";
+import { Input } from "../atoms/input";
 
 export const Newsletter = () => {
   const handleSubmit = (e: any) => {
@@ -39,3 +39,5 @@ export const Newsletter = () => {
     </section>
   );
 };
+
+export default Newsletter;

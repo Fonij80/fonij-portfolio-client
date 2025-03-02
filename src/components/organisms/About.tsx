@@ -1,5 +1,5 @@
-import { Statistics } from "./Statistics";
-import pilot from "../assets/pilot.png";
+import { Statistics } from "../Statistics";
+import pilot from "../../assets/pilot.png";
 
 export const About = () => {
   return (
@@ -32,3 +32,5 @@ export const About = () => {
     </section>
   );
 };
+
+export default About;

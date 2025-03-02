@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button } from "@/components/atoms/button";
 import { useTranslation } from "react-i18next";
 
 export function LanguageToggle() {

@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { Button } from "./ui/button";
-import myImage from '../assets/Me.png';
+import { Button } from "../atoms/button";
+import myImage from '../../assets/Me.png';
 
 export const Hero = () => {
   const { t } = useTranslation();
@@ -67,3 +67,5 @@ export const Hero = () => {
     </section>
   );
 };
+
+export default Hero;

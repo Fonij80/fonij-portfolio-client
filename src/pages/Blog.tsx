@@ -1,7 +1,5 @@
-import { Footer } from "../components/Footer";
-import { Navbar } from "../components/Navbar";
-import { ScrollToTop } from "../components/ScrollToTop";
-import { Newsletter } from "../components/Newsletter";
+import { ScrollToTop } from "../components/molecules";
+import { Navbar, Footer, Newsletter } from "../components/organisms";
 
 function Blog() {
     return (

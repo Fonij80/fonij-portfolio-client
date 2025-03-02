@@ -1,11 +1,5 @@
-import { About } from "../components/About";
-import { Features } from "../components/Features";
-import { Footer } from "../components/Footer";
-import { Hero } from "../components/Hero";
-import { WorkExperience } from "../components/WorkExperience";
-import { Navbar } from "../components/Navbar";
-import { ScrollToTop } from "../components/ScrollToTop";
-import { Projects } from "../components/Projects";
+import { ScrollToTop } from "../components/molecules";
+import { Navbar, Hero, About, WorkExperience, Skills, Footer, Projects } from "../components/organisms";
 
 function Home() {
     return (
@@ -14,7 +8,7 @@ function Home() {
             <Hero />
             <About />
             <WorkExperience />
-            <Features />
+            <Skills />
             <Projects />
             <Footer />
             <ScrollToTop />

@@ -1,8 +1,5 @@
-import { Footer } from "../components/Footer";
-import { Navbar } from "../components/Navbar";
-import { ScrollToTop } from "../components/ScrollToTop";
-import { ContactForm } from "../components/ContactForm";
-
+import { ScrollToTop } from "../components/molecules";
+import { Navbar, ContactForm, Footer } from "../components/organisms";
 
 function Contact() {
     return (

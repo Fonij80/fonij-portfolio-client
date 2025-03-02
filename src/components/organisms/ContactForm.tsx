@@ -9,10 +9,10 @@ import {
     FormLabel,
     FormControl,
     FormMessage,
-} from "./ui/form";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "./ui/textarea";
-import { Button } from "@/components/ui/button";
+} from "../atoms/form";
+import { Input } from "@/components/atoms/input";
+import { Textarea } from "../atoms/textarea";
+import { Button } from "@/components/atoms/button";
 
 // Define the validation schema using Zod
 const contactFormSchema = z.object({
@@ -115,3 +115,5 @@ export const ContactForm = () => {
         </section>
     );
 };
+
+export default ContactForm;

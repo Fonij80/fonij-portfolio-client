@@ -4,21 +4,21 @@ import {
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuList,
-} from "@/components/ui/navigation-menu";
+} from "@/components/atoms/navigation-menu";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "@/components/atoms/sheet";
 
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { buttonVariants } from "./ui/button";
+import { buttonVariants } from "../atoms/button";
 import { Menu } from "lucide-react";
-import { ModeToggle } from "./mode-toggle";
-import { LanguageToggle } from "./language-toggle";
-import logoImage from "../assets/logo2.png";
+import { ModeToggle } from "../molecules/mode-toggle";
+import { LanguageToggle } from "../molecules/language-toggle";
+import logoImage from "../../assets/logo2.png";
 
 interface RouteProps {
   href: string;
@@ -140,3 +140,5 @@ export const Navbar = () => {
     </header>
   );
 };
+
+export default Navbar;
