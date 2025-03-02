@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { Button } from "./ui/button";
-import { buttonVariants } from "./ui/button";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import myImage from '../assets/Me.png';
 
 export const Hero = () => {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+
   return (
     <section className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10">
       <div className="text-center lg:text-start space-y-6">
@@ -28,9 +31,13 @@ export const Hero = () => {
         </p>
 
         <div className="space-y-4 md:space-y-0 md:space-x-4">
-          <Button className="w-full md:w-1/3">Hire Me</Button>
-
-          <Button className="w-full md:w-1/3">Contact Me</Button>
+          <Button className="w-full md:w-1/3">{t("hero.hire_btn")}</Button>
+          <Button
+            className="w-full md:w-1/3"
+            onClick={() => navigate("/contact")}
+          >
+            {t("hero.contact_btn")}
+          </Button>
         </div>
       </div>
 

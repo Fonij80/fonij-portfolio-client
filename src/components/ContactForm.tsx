@@ -1,4 +1,4 @@
-import React from "react";
+import { useTranslation } from "react-i18next";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -30,7 +30,9 @@ const contactFormSchema = z.object({
 // Define the form's data type based on the schema
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
-export const Contact = () => {
+export const ContactForm = () => {
+    const { t } = useTranslation();
+
     const form = useForm<ContactFormValues>({
         resolver: zodResolver(contactFormSchema),
         defaultValues: {
@@ -44,7 +46,7 @@ export const Contact = () => {
     const onSubmit = (data: ContactFormValues) => {
         console.log("Form submitted:", data);
         alert("Your message has been sent!");
-        form.reset(); // Clear the form after submission
+        form.reset();
     };
 
     return (
@@ -53,7 +55,7 @@ export const Contact = () => {
             className="container py-24 sm:py-32"
         >
             <div className="max-w-md mx-auto p-6">
-                <h1 className="text-2xl font-bold mb-4">Contact Me</h1>
+                <h1 className="text-2xl font-bold mb-4">{t("contact.title")}</h1>
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
                         {/* Name Field */}
@@ -62,9 +64,9 @@ export const Contact = () => {
                             name="name"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Name</FormLabel>
+                                    <FormLabel>{t("contact.name_title")}</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Your Name" {...field} />
+                                        <Input placeholder={t("contact.name")} {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -77,9 +79,9 @@ export const Contact = () => {
                             name="email"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Email</FormLabel>
+                                    <FormLabel>{t("contact.email_title")}</FormLabel>
                                     <FormControl>
-                                        <Input placeholder="Your Email" {...field} />
+                                        <Input placeholder={t("contact.email")} {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -92,9 +94,9 @@ export const Contact = () => {
                             name="message"
                             render={({ field }) => (
                                 <FormItem>
-                                    <FormLabel>Message</FormLabel>
+                                    <FormLabel>{t("contact.message_title")}</FormLabel>
                                     <FormControl>
-                                        <Textarea placeholder="Your Message" {...field} />
+                                        <Textarea placeholder={t("contact.message")} {...field} />
                                     </FormControl>
                                     <FormMessage />
                                 </FormItem>
@@ -102,12 +104,14 @@ export const Contact = () => {
                         />
 
                         {/* Submit Button */}
-                        <Button type="submit" variant="default">
-                            Send Message
-                        </Button>
+                        <div className="flex justify-center">
+                            <Button type="submit" variant="default">
+                                {t("contact.contact_btn")}
+                            </Button>
+                        </div>
                     </form>
                 </Form>
             </div>
         </section>
     );
-}
+};
