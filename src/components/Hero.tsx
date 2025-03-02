@@ -1,7 +1,8 @@
 import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
-import { HeroCards } from "./HeroCards";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import myImage from '../assets/Me.jpg';
+
 
 export const Hero = () => {
   return (
@@ -44,9 +45,15 @@ export const Hero = () => {
         </div>
       </div>
 
-      {/* Hero cards sections */}
+      {/* Profile Picture in a Circle */}
       <div className="z-10">
-        <HeroCards />
+        <div className="rounded-full overflow-hidden shadow-lg w-80 h-80">
+          <img
+            src={myImage}
+            alt="Foroozan Iraji"
+            className="object-cover w-full h-full"
+          />
+        </div>
       </div>
 
       {/* Shadow effect */}
