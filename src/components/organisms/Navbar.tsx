@@ -13,13 +13,13 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/atoms/sheet";
-
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "../atoms/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "../molecules/mode-toggle";
 import { LanguageToggle } from "../molecules/language-toggle";
 import logoImage from "../../assets/logo2.png";
+import { ButtonLink } from "../atoms";
 
 interface RouteProps {
   href: string;
@@ -48,7 +48,7 @@ export const Navbar = () => {
   return (
     <header className="sticky border-b-[1px] top-0 pt-5 pb-5 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between ">
+        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between rtl:flex-row-reverse">
           <NavigationMenuItem className="font-bold flex">
             <a
               rel="noreferrer noopener"
@@ -95,17 +95,11 @@ export const Navbar = () => {
                       {t(`navbar.links.${labelKey}`)}
                     </NavLink>
                   ))}
-                  <a
-                    rel="noreferrer noopener"
+                  <ButtonLink
                     href="https://github.com/Fonij80"
-                    target="_blank"
-                    className={`w-[110px] border ${buttonVariants({
-                      variant: "secondary",
-                    })}`}
-                  >
-                    <GitHubLogoIcon className="mr-2 w-5 h-5" />
-                    Github
-                  </a>
+                    text={t("navbar.github")}
+                    icon={<GitHubLogoIcon className="mr-2 w-5 h-5" />}
+                  />
                 </nav>
               </SheetContent>
             </Sheet>
@@ -132,15 +126,11 @@ export const Navbar = () => {
 
           {/* Language Toggle */}
           <div className="hidden md:flex gap-2 items-center">
-            <a
-              rel="noreferrer noopener"
+            <ButtonLink
               href="https://github.com/Fonij80"
-              target="_blank"
-              className={`border ${buttonVariants({ variant: "secondary" })}`}
-            >
-              <GitHubLogoIcon className="mr-2 w-5 h-5" />
-              Github
-            </a>
+              text={t("navbar.github")}
+              icon={<GitHubLogoIcon className="mr-2 w-5 h-5" />}
+            />
             <LanguageToggle />
             <ModeToggle />
           </div>

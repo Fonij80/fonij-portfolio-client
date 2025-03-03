@@ -1,5 +1,5 @@
 import { ScrollToTop } from "../components/molecules";
-import { Navbar, Hero, About, WorkExperience, Skills, Footer, Projects } from "../components/organisms";
+import { Navbar, Hero, About, Footer } from "../components/organisms";
 
 function Home() {
     return (
@@ -7,9 +7,6 @@ function Home() {
             <Navbar />
             <Hero />
             <About />
-            <WorkExperience />
-            <Skills />
-            <Projects />
             <Footer />
             <ScrollToTop />
         </>

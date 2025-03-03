@@ -6,4 +6,5 @@ export { default as Navbar } from './Navbar';
 export { default as Projects } from './Projects';
 export { default as Skills } from './Skills';
 export { default as WorkExperience } from './WorkExperience';
+export { default as Education } from './Education';
 export { default as Newsletter } from './Newsletter';

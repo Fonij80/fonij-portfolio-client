@@ -16,30 +16,8 @@ export const Hero = () => {
     }
   };
 
-  const [currentLocation, setCurrentLocation] = useState({ lat: null, lng: null });
-  const [theme, setTheme] = useState("light"); // Track the current theme
-
-  // Fetch user's current location using Geolocation API
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        setCurrentLocation({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        });
-      },
-      (error) => console.error("Error fetching location:", error)
-    );
-  }, []);
-
-  // Listen for theme changes
-  useEffect(() => {
-    const currentTheme = document.body.getAttribute("data-theme") || "light";
-    setTheme(currentTheme);
-  }, []);
-
   const data = [
-    { country: "ir", value: 1 }, // Highlight Iran
+    { country: "ir", value: 1 },
   ];
 
   return (
@@ -47,9 +25,9 @@ export const Hero = () => {
       {/* World Map */}
       <div className="absolute inset-0 -z-10 flex items-center justify-center">
         <WorldMap
-          color={theme === "dark" ? "#1f2937" : "#3b82f6"} // Change map color based on theme
+          color="#BF817F"
           backgroundColor={"transparent"}
-          borderColor={theme === "dark" ? "#374151" : "#d1d5db"} // Change border color
+          borderColor="#BF817F"
           title=""
           value-suffix=""
           size="xxl"

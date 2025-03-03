@@ -7,7 +7,7 @@ export function LanguageToggle() {
     const toggleLanguage = () => {
         const newLanguage = i18n.language === "en" ? "fa" : "en";
         i18n.changeLanguage(newLanguage);
-        document.documentElement.dir = newLanguage === 'fa' ? 'rtl' : 'ltr';
+        document.documentElement.dir = newLanguage === "fa" ? "rtl" : "ltr";
     };
 
     return (

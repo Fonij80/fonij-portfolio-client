@@ -6,12 +6,12 @@ html {
 .shadow {
   position: absolute;
   background: hsl(var(--primary) / 0%);
-  border-radius: 24px;
-  rotate: 90deg;
+  border-radius: 50px;
+  rotate: 180deg;
   z-index: -1;
   width: 260px;
   top: 200px;
-  height: 400px;
+  height: 200px;
   filter: blur(150px);
   will-change: transform;
   animation: shadow-slide infinite 4s linear alternate;
@@ -20,12 +20,12 @@ html {
 @keyframes shadow-slide {
   from {
     background: hsl(var(--primary) / 20%);
-    right: 460px;
+    left: 0;
   }
 
   to {
     background: hsl(var(--primary) / 80%);
-    right: 160px;
+    left: calc(100vw - 700px);
   }
 }
 
@@ -37,12 +37,12 @@ html {
   @keyframes shadow-slide {
     from {
       background: hsl(var(--primary) / 20%);
-      right: 460px;
+      left: 0;
     }
 
     to {
       background: hsl(var(--primary) / 50%);
-      right: 160px;
+      left: calc(100vw - 20px);
     }
   }
 }
@@ -51,19 +51,19 @@ html {
   .shadow {
     top: 70px;
     width: 100px;
-    height: 350px;
+    height: 50px;
     filter: blur(60px);
   }
 
   @keyframes shadow-slide {
     from {
       background: hsl(var(--primary) / 20%);
-      right: 280px;
+      left: 0;
     }
 
     to {
       background: hsl(var(--primary) / 30%);
-      right: 100px;
+      left: calc(100vw - 100px);
     }
   }
 }

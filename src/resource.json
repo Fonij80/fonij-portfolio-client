@@ -6,12 +6,15 @@
                 "blog": "Blog",
                 "about": "About Me",
                 "contact": "Contact Me"
-            }
+            },
+            "github": "Github"
         },
         "hero": {
             "contact_btn": "Contact Me",
             "hire_btn": "Hire Me",
-            "about_btn": "About Me"
+            "about_btn": "About Me",
+            "title": "I'm Foroozan, a Developer",
+            "description": ""
         },
         "contact": {
             "title": "Get in Touch",
@@ -22,6 +25,16 @@
             "name": "Your Name",
             "email": "Your Email",
             "message": "Your Message to Me"
+        },
+        "about": {
+            "title": "About Me",
+            "description": "I am actively expanding my skill set by learning Frontend technologies, with the goal of becoming a Full Stack Developer. My passion for technology extends beyond coding; I have a strong interest in product management and digital product design. I am eager to pursue an internship in product management to gain hands-on experience and contribute to impactful projects within the software industry. I am currently converting some of my ideas into software projects, which I store in my GitHub account. I also push my learning code into the 'Learn' repositories I have created.",
+            "items": {
+                "one": "Skills",
+                "two": "Work Experiences",
+                "three": "Education",
+                "four": "Projects"
+            }
         }
     },
     "fa": {
@@ -31,12 +44,15 @@
                 "blog": "بلاگ",
                 "about": "درباره‌ی من",
                 "contact": "ارتباط با من"
-            }
+            },
+            "github": "گیت‌هاب"
         },
         "hero": {
             "contact_btn": "ارتباط با من",
             "hire_btn": "به من پروژه بده!",
-            "about_btn": "درباره‌ی من"
+            "about_btn": "درباره‌ی من",
+            "title": "",
+            "description": ""
         },
         "contact": {
             "title": "ارتباط با من",
@@ -47,6 +63,16 @@
             "name": "نام شما",
             "email": "ایمیل شما",
             "message": "پیام شما به من"
+        },
+        "about": {
+            "title": "درباره‌ی من",
+            "description": "عاشق کد زدنم!",
+            "items": {
+                "one": "مهارت‌ها",
+                "two": "تجربه‌های کاری",
+                "three": "تحصیلات",
+                "four": "پروژه‌ها"
+            }
         }
     }
 }
