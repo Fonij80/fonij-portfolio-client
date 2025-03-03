@@ -14,7 +14,6 @@ import { Input } from "@/components/atoms/input";
 import { Textarea } from "../atoms/textarea";
 import { Button } from "@/components/atoms/button";
 
-// Define the validation schema using Zod
 const contactFormSchema = z.object({
     name: z
         .string()
@@ -27,7 +26,6 @@ const contactFormSchema = z.object({
         .min(10, { message: "Message must be at least 10 characters long." }),
 });
 
-// Define the form's data type based on the schema
 type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export const ContactForm = () => {
@@ -55,10 +53,10 @@ export const ContactForm = () => {
             className="container py-24 sm:py-32"
         >
             <div className="max-w-md mx-auto p-6">
-                <h1 className="text-2xl font-bold mb-4">{t("contact.title")}</h1>
+                <h1 className="text-2xl font-bold text-center mb-4">{t("contact.title")}</h1>
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-                        {/* Name Field */}
+
                         <FormField
                             control={form.control}
                             name="name"
@@ -73,7 +71,6 @@ export const ContactForm = () => {
                             )}
                         />
 
-                        {/* Email Field */}
                         <FormField
                             control={form.control}
                             name="email"
@@ -88,7 +85,6 @@ export const ContactForm = () => {
                             )}
                         />
 
-                        {/* Message Field */}
                         <FormField
                             control={form.control}
                             name="message"
@@ -103,7 +99,7 @@ export const ContactForm = () => {
                             )}
                         />
 
-                        {/* Submit Button */}
+
                         <div className="flex justify-center">
                             <Button type="submit" variant="default">
                                 {t("contact.contact_btn")}

@@ -13,7 +13,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/atoms/sheet";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "../atoms/button";
 import { Menu } from "lucide-react";
 import { ModeToggle } from "../molecules/mode-toggle";
@@ -100,6 +100,11 @@ export const Navbar = () => {
                     text={t("navbar.github")}
                     icon={<GitHubLogoIcon className="mr-2 w-5 h-5" />}
                   />
+                  <ButtonLink
+                    href="https://www.linkedin.com/in/foroozan-iraji/"
+                    text={t("navbar.linkedin")}
+                    icon={<LinkedInLogoIcon className="mr-2 w-5 h-5" />}
+                  />
                 </nav>
               </SheetContent>
             </Sheet>
@@ -130,6 +135,11 @@ export const Navbar = () => {
               href="https://github.com/Fonij80"
               text={t("navbar.github")}
               icon={<GitHubLogoIcon className="mr-2 w-5 h-5" />}
+            />
+            <ButtonLink
+              href="https://www.linkedin.com/in/foroozan-iraji/"
+              text={t("navbar.linkedin")}
+              icon={<LinkedInLogoIcon className="mr-2 w-5 h-5" />}
             />
             <LanguageToggle />
             <ModeToggle />

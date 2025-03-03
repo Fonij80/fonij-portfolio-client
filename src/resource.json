@@ -7,7 +7,8 @@
                 "about": "About Me",
                 "contact": "Contact Me"
             },
-            "github": "Github"
+            "github": "Github",
+            "linkedin": "Linkedin"
         },
         "hero": {
             "contact_btn": "Contact Me",
@@ -45,7 +46,8 @@
                 "about": "درباره‌ی من",
                 "contact": "ارتباط با من"
             },
-            "github": "گیت‌هاب"
+            "github": "گیت‌هاب",
+            "linkedin": "لینکدین"
         },
         "hero": {
             "contact_btn": "ارتباط با من",
