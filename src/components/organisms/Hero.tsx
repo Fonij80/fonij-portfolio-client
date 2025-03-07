@@ -75,7 +75,7 @@ export const Hero = () => {
 
         {/* Profile Picture in a Circle */}
         <div className="z-10">
-          <div className="rounded-full overflow-hidden shadow-lg w-96 h-auto mx-auto lg:ml-80">
+          <div className="rounded-full overflow-hidden w-96 h-auto mx-auto lg:ml-80">
             <img
               src={myImage}
               alt="Foroozan Iraji"

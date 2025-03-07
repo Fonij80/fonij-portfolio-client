@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import "./App.css";
-import { Home, Blog, Contact, Hire } from './pages';
+import { Home, Blog, Contact, Hire, PostDetails } from './pages';
 
 function App() {
   return (
@@ -10,9 +10,10 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/hire" element={<Hire />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/post/:id" element={<PostDetails />} />
         </Routes>
       </Router>
     </I18nextProvider>

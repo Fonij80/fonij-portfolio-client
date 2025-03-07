@@ -36,6 +36,9 @@
                 "three": "Education",
                 "four": "Projects"
             }
+        },
+        "footer": {
+            "copyright": "© {{year}} Portfolio made by <creator>Fonij</creator>, Inspired by <inspiration>Leo Miranda's Landing page</inspiration>"
         }
     },
     "fa": {
@@ -75,6 +78,9 @@
                 "three": "تحصیلات",
                 "four": "پروژه‌ها"
             }
+        },
+        "footer": {
+            "copyright": "© {{year}}  ساخته شده توسط <creator>Fonij</creator>، الهام گرفته از <inspiration>Leo Miranda's Landing page</inspiration>"
         }
     }
 }

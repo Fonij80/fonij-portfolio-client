@@ -1,6 +1,10 @@
+import { Trans, useTranslation } from "react-i18next";
 import { FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
 
 export const Footer = () => {
+  const { t } = useTranslation();
+
+
   return (
     <footer id="footer">
       <hr className="w-11/12 mx-auto" />
@@ -36,24 +40,24 @@ export const Footer = () => {
         </div>
 
         <h3>
-          &copy; 2025 Portfolio made by{" "}
-          <a
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://www.linkedin.com/in/foroozan-iraji/"
-            className="text-primary transition-all border-primary hover:border-b-2"
-          >
-            Fonij
-          </a>
-          {" "}, Inspired by{" "}
-          <a
-            rel="noreferrer noopener"
-            target="_blank"
-            href="https://github.com/leoMirandaa/shadcn-landing-page"
-            className="text-primary transition-all border-primary hover:border-b-2"
-          >
-            Leo Miranda's Landing page
-          </a>
+          <Trans
+            i18nKey="footer.copyright"
+            values={{ year: 2025 }}
+            components={{
+              creator: (
+                <a
+                  href="https://www.linkedin.com/in/foroozan-iraji/"
+                  className="text-primary hover:border-b-2"
+                />
+              ),
+              inspiration: (
+                <a
+                  href="https://github.com/leoMirandaa/shadcn-landing-page"
+                  className="text-primary hover:border-b-2"
+                />
+              )
+            }}
+          />
         </h3>
       </section>
     </footer>
