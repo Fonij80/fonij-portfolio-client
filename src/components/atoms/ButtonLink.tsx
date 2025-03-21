@@ -2,7 +2,7 @@ import { buttonVariants } from "./button";
 
 interface ButtonLinkProps {
     href: string;
-    text: string;
+    text?: string;
     icon?: JSX.Element;
 }
 

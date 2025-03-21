@@ -41,7 +41,7 @@ const routeList: RouteProps[] = [
   },
 ];
 
-export const Navbar = () => {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { t } = useTranslation();
 
@@ -149,5 +149,3 @@ export const Navbar = () => {
     </header>
   );
 };
-
-export default Navbar;

@@ -1,14 +1,10 @@
-import { ScrollToTop } from "../components/molecules";
-import { Navbar, Hero, About, Footer } from "../components/organisms";
+import { Hero, About } from "../components/organisms";
 
 function Home() {
     return (
         <>
-            <Navbar />
             <Hero />
             <About />
-            <Footer />
-            <ScrollToTop />
         </>
     );
 }

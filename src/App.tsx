@@ -1,21 +1,13 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import "./App.css";
-import { Home, Blog, Contact, Hire, PostDetails } from './pages';
+import router from "./Router";
 
 function App() {
   return (
     <I18nextProvider i18n={i18n}>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/hire" element={<Hire />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/post/:id" element={<PostDetails />} />
-        </Routes>
-      </Router>
+      <RouterProvider router={router} />;
     </I18nextProvider>
   );
 }
