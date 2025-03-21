@@ -60,7 +60,7 @@ export const About = () => {
             />
             {selectedItem && (
               <div className="mt-8">
-                {selectedItem === "Skills" && <Skills />}
+                {selectedItem === "Skills" && <Skills isVisible={selectedItem === "Skills"} />}
                 {selectedItem === "Work Experiences" && <WorkExperience />}
                 {selectedItem === "Education" && <Education />}
                 {selectedItem === "Projects" && <Projects />}

@@ -1,67 +1,66 @@
-import { Card, CardContent, CardHeader, CardTitle } from "../atoms/card";
-import { MedalIcon, MapIcon, PlaneIcon, GiftIcon } from "../Icons";
+import { MedalIcon } from "../Icons";
 
 interface FeatureProps {
   icon: JSX.Element;
   title: string;
+  company: string;
+  from: string;
+  to: string;
   description: string;
 }
 
-const features: FeatureProps[] = [
+const jobsList: FeatureProps[] = [
   {
     icon: <MedalIcon />,
-    title: "Accessibility",
+    title: "Backend Developer",
+    company: "Tosan",
+    from: "10/12/2020",
+    to: "10/12/2023",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Developed and maintained backend services using Java and Spring Boot. Improved system performance by optimizing database queries and implementing caching strategies.",
   },
   {
-    icon: <MapIcon />,
-    title: "Community",
+    icon: <MedalIcon />,
+    title: "Software Engineer",
+    company: "Snapp",
+    from: "01/01/2018",
+    to: "10/11/2020",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Worked on scalable microservices architecture. Collaborated with cross-functional teams to deliver high-quality software solutions.",
   },
   {
-    icon: <PlaneIcon />,
-    title: "Scalability",
+    icon: <MedalIcon />,
+    title: "Junior Developer",
+    company: "TechStart",
+    from: "06/01/2016",
+    to: "12/31/2017",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
-  },
-  {
-    icon: <GiftIcon />,
-    title: "Gamification",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quas provident cum",
+      "Assisted in developing web applications using JavaScript and React. Gained experience in agile methodologies and version control systems.",
   },
 ];
 
 export const WorkExperience = () => {
   return (
-    <section
-      id="howItWorks"
-      className="container text-center py-24 sm:py-32"
-    >
-      <h2 className="text-3xl md:text-4xl font-bold ">
-        My Work Experiences
-      </h2>
-      <p className="md:w-3/4 mx-auto mt-4 mb-8 text-xl text-muted-foreground">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis
-        dolor pariatur sit!
-      </p>
+    <section id="workExperience" className="container py-24 sm:py-32">
+      {/* Timeline */}
+      <div className="relative">
+        {/* Center line */}
+        <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-muted"></div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {features.map(({ icon, title, description }: FeatureProps) => (
-          <Card
-            key={title}
-            className="bg-muted/50"
-          >
-            <CardHeader>
-              <CardTitle className="grid gap-4 place-items-center">
-                {icon}
-                {title}
-              </CardTitle>
-            </CardHeader>
-            <CardContent>{description}</CardContent>
-          </Card>
+        {jobsList.map((job, index) => (
+          <div key={index} className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? 'flex-row-reverse' : 'flex-row'
+            }`}>
+            <div className="order-1 w-5/12"></div>
+            <div className="z-20 flex items-center order-1 bg-primary shadow-xl w-8 h-8 rounded-full">
+              <h1 className="mx-auto font-semibold text-lg text-white">{job.icon}</h1>
+            </div>
+            <div className="order-1 bg-card rounded-lg shadow-xl w-5/12 px-6 py-4">
+              <h3 className="mb-3 font-bold text-xl">{job.title}</h3>
+              <p className="text-sm font-medium text-muted-foreground">{job.company}</p>
+              <p className="text-sm text-muted-foreground mb-3">{job.from} - {job.to}</p>
+              <p className="text-sm leading-snug tracking-wide text-opacity-100">{job.description}</p>
+            </div>
+          </div>
         ))}
       </div>
     </section>

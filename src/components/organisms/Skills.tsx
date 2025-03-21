@@ -37,7 +37,7 @@ const features: FeatureProps[] = [
   },
 ];
 
-const featureList: string[] = [
+const skillList: string[] = [
   "Java",
   "Python",
   "Javascript",
@@ -49,24 +49,24 @@ const featureList: string[] = [
   "Jira",
 ];
 
-export const Skills = () => {
+export const Skills = ({ isVisible }: { isVisible: boolean }) => {
   return (
     <section
-      id="features"
+      id="skilld"
       className="container py-24 sm:py-32 space-y-8"
     >
-      <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-        My Skills
-      </h2>
-
       <div className="flex flex-wrap md:justify-center gap-4">
-        {featureList.map((feature: string) => (
-          <div key={feature}>
-            <Badge
-              variant="secondary"
-              className="text-sm"
-            >
-              {feature}
+        {skillList.map((skill: string, index: number) => (
+          <div
+            key={skill}
+            className={`transition-all duration-500 ease-in-out ${isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-4"
+              }`}
+            style={{ transitionDelay: `${index * 50}ms` }}
+          >
+            <Badge variant="secondary" className="text-sm">
+              {skill}
             </Badge>
           </div>
         ))}
