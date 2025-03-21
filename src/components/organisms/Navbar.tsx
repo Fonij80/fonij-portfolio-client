@@ -16,8 +16,7 @@ import {
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { buttonVariants } from "../atoms/button";
 import { Menu } from "lucide-react";
-import { ModeToggle } from "../molecules/mode-toggle";
-import { LanguageToggle } from "../molecules/language-toggle";
+import { ModeToggle, LanguageToggle } from "../molecules";
 import logoImage from "../../assets/logo2.png";
 import { ButtonLink } from "../atoms";
 
