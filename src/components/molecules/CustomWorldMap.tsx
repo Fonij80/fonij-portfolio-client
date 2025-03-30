@@ -1,6 +1,6 @@
 import WorldMap from "react-svg-worldmap";
 
-export default function CustomWorldMap() {
+export const CustomWorldMap = () => {
 
     const data = [
         { country: "ir", value: 1 },

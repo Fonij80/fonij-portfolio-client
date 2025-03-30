@@ -1,8 +1,9 @@
 import { Outlet } from "react-router-dom";
-import { ScrollToTop } from "../molecules";
-import { Navbar, Footer } from "./";
+import { ScrollToTop } from "../../molecules";
+import { Navbar } from "./Navbar";
+import { Footer } from "./Footer";
 
-export default function Layout() {
+export const Layout = () => {
     return (
         <>
             <Navbar />

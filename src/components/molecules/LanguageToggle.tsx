@@ -1,7 +1,7 @@
 import { Button } from "@/components/atoms/button";
 import { useTranslation } from "react-i18next";
 
-export default function LanguageToggle() {
+export const LanguageToggle = () => {
     const { i18n } = useTranslation();
 
     const toggleLanguage = () => {

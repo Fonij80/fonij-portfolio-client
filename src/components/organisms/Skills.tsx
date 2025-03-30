@@ -94,5 +94,3 @@ export const Skills = ({ isVisible }: { isVisible: boolean }) => {
     </section>
   );
 };
-
-export default Skills;

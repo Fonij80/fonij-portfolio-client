@@ -27,5 +27,3 @@ export const CardList = ({ items, onItemClick }: CardListProps) => {
         </div>
     );
 };
-
-export default CardList;

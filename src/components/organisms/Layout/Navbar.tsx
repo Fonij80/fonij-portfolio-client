@@ -13,12 +13,10 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/atoms/sheet";
-import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { buttonVariants } from "../atoms/button";
+import { buttonVariants } from "../../atoms/button";
 import { Menu } from "lucide-react";
-import { ModeToggle, LanguageToggle } from "../molecules";
-import logoImage from "../../assets/logo2.png";
-import { ButtonLink } from "../atoms";
+import { ModeToggle, LanguageToggle, NavSocialLinks } from "../../molecules";
+import { Logo } from '../../atoms';
 
 interface RouteProps {
   href: string;
@@ -40,7 +38,7 @@ const routeList: RouteProps[] = [
   },
 ];
 
-export default function Navbar() {
+export const Navbar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { t } = useTranslation();
 
@@ -48,15 +46,7 @@ export default function Navbar() {
     <header className="sticky border-b-[1px] top-0 pt-5 pb-5 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
         <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between rtl:flex-row-reverse">
-          <NavigationMenuItem className="font-bold flex">
-            <a
-              rel="noreferrer noopener"
-              href="/"
-              className="ml-2 font-bold text-xl flex items-center"
-            >
-              <img src={logoImage} alt="Logo" className="h-20 w-auto" />
-            </a>
-          </NavigationMenuItem>
+          <Logo />
 
           {/* mobile */}
           <span className="flex md:hidden">
@@ -94,16 +84,7 @@ export default function Navbar() {
                       {t(`navbar.links.${labelKey}`)}
                     </NavLink>
                   ))}
-                  <ButtonLink
-                    href="https://github.com/Fonij80"
-                    text={t("navbar.github")}
-                    icon={<GitHubLogoIcon className="mr-2 w-5 h-5" />}
-                  />
-                  <ButtonLink
-                    href="https://www.linkedin.com/in/foroozan-iraji/"
-                    text={t("navbar.linkedin")}
-                    icon={<LinkedInLogoIcon className="mr-2 w-5 h-5" />}
-                  />
+                  <NavSocialLinks />
                 </nav>
               </SheetContent>
             </Sheet>
@@ -128,18 +109,8 @@ export default function Navbar() {
             ))}
           </nav>
 
-          {/* Language Toggle */}
           <div className="hidden md:flex gap-2 items-center">
-            <ButtonLink
-              href="https://github.com/Fonij80"
-              text={t("navbar.github")}
-              icon={<GitHubLogoIcon className="mr-2 w-5 h-5" />}
-            />
-            <ButtonLink
-              href="https://www.linkedin.com/in/foroozan-iraji/"
-              text={t("navbar.linkedin")}
-              icon={<LinkedInLogoIcon className="mr-2 w-5 h-5" />}
-            />
+            <NavSocialLinks />
             <LanguageToggle />
             <ModeToggle />
           </div>
