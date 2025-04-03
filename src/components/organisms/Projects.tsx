@@ -1,5 +1,5 @@
 import { ProjectDetailsCard } from '../molecules';
-import { MagnifierIcon, WalletIcon, ChartIcon } from "../Icons";
+import { FaTools } from "react-icons/fa";
 import { ProjectDetailsType } from '../../constants/types';
 
 const projectsList: ProjectDetailsType[] = [
@@ -7,21 +7,21 @@ const projectsList: ProjectDetailsType[] = [
     title: "Baristoosh",
     description:
       "A platform for developers to collaborate on code in real-time.",
-    logo: <ChartIcon />,
+    logo: <FaTools />,
     link: "https://code-collaboration-demo.com",
   },
   {
     title: "Celebrate It",
     description:
       "An intuitive tool for managing projects and tracking progress.",
-    logo: <WalletIcon />,
+    logo: <FaTools />,
     link: "https://project-management-demo.com",
   },
   {
     title: "FilmGozin",
     description:
       "Automate repetitive tasks to save time and increase efficiency.",
-    logo: <MagnifierIcon />,
+    logo: <FaTools />,
     link: "https://task-automation-demo.com",
   },
 ];

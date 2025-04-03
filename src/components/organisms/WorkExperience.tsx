@@ -1,6 +1,6 @@
 import { MedalIcon } from "../Icons";
 
-interface FeatureProps {
+interface WorkExperienceProps {
   icon: JSX.Element;
   title: string;
   company: string;
@@ -9,7 +9,7 @@ interface FeatureProps {
   description: string;
 }
 
-const jobsList: FeatureProps[] = [
+const jobsList: WorkExperienceProps[] = [
   {
     icon: <MedalIcon />,
     title: "Backend Developer",
@@ -18,33 +18,13 @@ const jobsList: FeatureProps[] = [
     to: "10/12/2023",
     description:
       "Developed and maintained backend services using Java and Spring Boot. Improved system performance by optimizing database queries and implementing caching strategies.",
-  },
-  {
-    icon: <MedalIcon />,
-    title: "Software Engineer",
-    company: "Snapp",
-    from: "01/01/2018",
-    to: "10/11/2020",
-    description:
-      "Worked on scalable microservices architecture. Collaborated with cross-functional teams to deliver high-quality software solutions.",
-  },
-  {
-    icon: <MedalIcon />,
-    title: "Junior Developer",
-    company: "TechStart",
-    from: "06/01/2016",
-    to: "12/31/2017",
-    description:
-      "Assisted in developing web applications using JavaScript and React. Gained experience in agile methodologies and version control systems.",
-  },
+  }
 ];
 
 export const WorkExperience = () => {
   return (
     <section id="workExperience" className="container py-24 sm:py-32">
-      {/* Timeline */}
       <div className="relative">
-        {/* Center line */}
         <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-muted"></div>
 
         {jobsList.map((job, index) => (

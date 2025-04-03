@@ -16,13 +16,7 @@ const educationList: EducationProps[] = [
 
 export const Education = () => {
     return (
-        <section
-            id="education"
-            className="container py-24 sm:py-32 space-y-8"
-        >
-            <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white">
-                Education
-            </h2>
+        <section id="education" className="container py-24 sm:py-32 space-y-8">
             <div className="flex flex-wrap md:justify-center gap-4">
                 {educationList.map((education, index) => (
                     <div
