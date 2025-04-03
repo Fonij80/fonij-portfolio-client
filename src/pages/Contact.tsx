@@ -1,11 +1,9 @@
 import { ContactForm } from "../components/organisms";
 
-function Contact() {
+export const Contact = () => {
     return (
         <>
             <ContactForm />
         </>
-    );
+    )
 }
-
-export default Contact;

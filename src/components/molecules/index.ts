@@ -1,4 +1,5 @@
 export { CardList } from './CardList';
+export { IconList } from './IconList';
 export { ScrollToTop } from './ScrollToTop';
 export { LanguageToggle } from './LanguageToggle';
 export { ModeToggle } from './ModeToggle';
@@ -6,3 +7,4 @@ export { CustomWorldMap } from './CustomWorldMap';
 export { ProfileImage } from './ProfileImage';
 export { HeroContent } from './HeroContent';
 export { NavSocialLinks } from './NavSocialLinks';
+export { ProjectDetailsCard } from './ProjectDetailsCard';

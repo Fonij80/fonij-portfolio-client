@@ -8,3 +8,4 @@ export { Education } from './Education';
 export { Newsletter } from './Newsletter';
 export { Layout } from './Layout/Layout';
 export { NotFoundError } from './NotFoundError';
+export { Hire } from './Hire';

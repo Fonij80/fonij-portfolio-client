@@ -12,8 +12,6 @@ export const CustomWorldMap = () => {
                 color="#BF817F"
                 backgroundColor={"transparent"}
                 borderColor="#BF817F"
-                title=""
-                value-suffix=""
                 size="xxl"
                 data={data}
             />

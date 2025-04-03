@@ -1,15 +1,13 @@
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
 import { Button } from "../atoms/button";
 
 export const HeroContent = () => {
     const { t } = useTranslation();
-    const navigate = useNavigate();
 
-    const scrollToAbout = () => {
-        const aboutSection = document.getElementById("about");
-        if (aboutSection) {
-            aboutSection.scrollIntoView({ behavior: "smooth" });
+    const scrollToSelectedSection = (sectionName: string) => {
+        const section = document.getElementById(sectionName);
+        if (section) {
+            section.scrollIntoView({ behavior: "smooth" });
         }
     };
 
@@ -31,19 +29,20 @@ export const HeroContent = () => {
             </main>
 
             <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-                Build your React landing page effortlessly with the required sections for your project.
+                {t("hero.description")}
             </p>
 
             <div className="space-y-4 md:space-y-0 md:space-x-4">
                 <Button
                     className="w-full md:w-1/3"
-                    onClick={() => navigate("/hire")}
+                    onClick={() => scrollToSelectedSection("hire")}
+                    disabled={true}
                 >
                     {t("hero.hire_btn")}
                 </Button>
                 <Button
                     className="w-full md:w-1/3"
-                    onClick={scrollToAbout}
+                    onClick={() => scrollToSelectedSection("about")}
                 >
                     {t("hero.about_btn")}
                 </Button>

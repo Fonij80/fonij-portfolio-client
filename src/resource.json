@@ -15,7 +15,7 @@
             "hire_btn": "Hire Me",
             "about_btn": "About Me",
             "title": "I'm Foroozan, a Developer",
-            "description": ""
+            "description": "Coder, Environmentalist, Linguaphile, Bibliophile"
         },
         "contact": {
             "title": "Get in Touch",
@@ -35,6 +35,9 @@
                 "two": "Work Experiences",
                 "three": "Education",
                 "four": "Projects"
+            },
+            "projects": {
+                "demo_btn": "Live Demo"
             }
         },
         "footer": {
@@ -54,10 +57,10 @@
         },
         "hero": {
             "contact_btn": "ارتباط با من",
-            "hire_btn": "به من پروژه بده!",
+            "hire_btn": "استخدام من",
             "about_btn": "درباره‌ی من",
             "title": "",
-            "description": ""
+            "description": "من یه برنامه‌نویسم که عاشق کد زدنم. تفریحم کتاب خوندن و یاد گرفتن زبان‌های مختلفه. همیشه سعی می‌کنم جوری رفتار کنم که کمترین آسیب به محیط‌زیست برسه."
         },
         "contact": {
             "title": "ارتباط با من",
@@ -77,6 +80,9 @@
                 "two": "تجربه‌های کاری",
                 "three": "تحصیلات",
                 "four": "پروژه‌ها"
+            },
+            "projects": {
+                "demo_btn": "دموی پروژه"
             }
         },
         "footer": {

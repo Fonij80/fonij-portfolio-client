@@ -1,96 +1,46 @@
-import { Badge } from "../atoms/badge";
-import {
-    Card,
-    CardContent,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/atoms/card";
-import image from "../../assets/growth.png";
-import image3 from "../../assets/reflecting.png";
-import image4 from "../../assets/looking-ahead.png";
-
-interface FeatureProps {
-    title: string;
-    description: string;
-    image: string;
+interface EducationProps {
+    university: string;
+    degree: string;
+    from: string;
+    to: string;
 }
 
-const features: FeatureProps[] = [
+const educationList: EducationProps[] = [
     {
-        title: "Responsive Design",
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-        image: image4,
-    },
-    {
-        title: "Intuitive user interface",
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-        image: image3,
-    },
-    {
-        title: "AI-Powered insights",
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi nesciunt est nostrum omnis ab sapiente.",
-        image: image,
-    },
-];
-
-const featureList: string[] = [
-    "Java",
-    "Python",
-    "Javascript",
-    "Spring",
-    "Spring Boot",
-    "Django",
-    "React.js",
-    "Git",
-    "Jira",
+        university: "Sharif University of Technology",
+        degree: "Bachelor of Science in Computer Engineering",
+        from: "1/2/2020",
+        to: "1/2/2025"
+    }
 ];
 
 export const Education = () => {
     return (
         <section
-            id="features"
+            id="education"
             className="container py-24 sm:py-32 space-y-8"
         >
-            <h2 className="text-3xl lg:text-4xl font-bold md:text-center">
-                My Skills
+            <h2 className="text-3xl font-bold text-center text-gray-800 dark:text-white">
+                Education
             </h2>
-
             <div className="flex flex-wrap md:justify-center gap-4">
-                {featureList.map((feature: string) => (
-                    <div key={feature}>
-                        <Badge
-                            variant="secondary"
-                            className="text-sm"
-                        >
-                            {feature}
-                        </Badge>
+                {educationList.map((education, index) => (
+                    <div
+                        key={index}
+                        className="bg-white dark:bg-gray-800 shadow-md rounded-lg p-6 w-full md:w-1/2 lg:w-1/3"
+                    >
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                            {education.university}
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-400">
+                            {education.degree}
+                        </p>
+                        <p className="text-sm text-gray-500 dark:text-gray-400">
+                            {education.from} - {education.to}
+                        </p>
                     </div>
                 ))}
             </div>
-            {/* Beautiful Card */}
-            {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {features.map(({ title, description, image }: FeatureProps) => (
-          <Card key={title}>
-            <CardHeader>
-              <CardTitle>{title}</CardTitle>
-            </CardHeader>
-
-            <CardContent>{description}</CardContent>
-
-            <CardFooter>
-              <img
-                src={image}
-                alt="About feature"
-                className="w-[200px] lg:w-[300px] mx-auto"
-              />
-            </CardFooter>
-          </Card>
-        ))}
-      </div> */}
         </section>
     );
 };

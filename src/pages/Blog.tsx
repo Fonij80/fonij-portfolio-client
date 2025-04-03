@@ -1,11 +1,6 @@
-import { ScrollToTop } from "../components/molecules";
-import { Navbar, Footer } from "../components/organisms";
-
-function Blog() {
+export const Blog = () => {
     return (
         <>
         </>
     );
 }
-
-export default Blog;

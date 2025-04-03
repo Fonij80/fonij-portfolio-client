@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import { Home, Blog, Contact, Hire } from "./pages";
+import { Home, Blog, Contact } from "./pages";
 import { Layout, NotFoundError } from "./components/organisms";
 
 const router = createBrowserRouter([
@@ -19,11 +19,7 @@ const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
-      },
-      {
-        path: "hire",
-        element: <Hire />,
-      },
+      }
     ],
   },
 ]);

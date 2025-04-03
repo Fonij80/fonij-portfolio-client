@@ -1,12 +1,11 @@
-import { Hero, About } from "../components/organisms";
+import { Hero, About, Hire } from "../components/organisms";
 
-function Home() {
+export const Home = () => {
     return (
         <>
             <Hero />
             <About />
+            {/* <Hire /> */}
         </>
     );
 }
-
-export default Home;

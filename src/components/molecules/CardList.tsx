@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "../atoms/card";
-import { CardProps } from "../constants/types";
+import { CardProps } from "../../constants/types";
 
 interface CardListProps {
     items: CardProps[];

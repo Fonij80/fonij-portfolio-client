@@ -3,7 +3,7 @@ import { Typography, Box } from "@mui/material";
 import axios from "axios";
 import { ScrollToTop } from "../components/molecules";
 
-const PostDetails = ({ match }) => {
+export const PostDetails = ({ match }) => {
     const [post, setPost] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -48,5 +48,3 @@ const PostDetails = ({ match }) => {
         </div>
     );
 };
-
-export default PostDetails;

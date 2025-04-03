@@ -7,7 +7,7 @@ import router from "./Router";
 function App() {
   return (
     <I18nextProvider i18n={i18n}>
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </I18nextProvider>
   );
 }
