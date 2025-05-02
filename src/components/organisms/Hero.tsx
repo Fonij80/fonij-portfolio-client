@@ -23,18 +23,18 @@ export const Hero = () => {
         {/* Text Section */}
         <div className="space-y-6 w-full lg:text-start">
           <h1 className="text-5xl md:text-6xl font-bold">
-            {t("hero.intro")}{" "}
+            {t("home_page.hero.intro")}{" "}
             <span className="bg-gradient-to-r from-[#F596D3] to-[#D247BF] bg-clip-text text-transparent">
-              {t("hero.name")}
+              {t("home_page.hero.name")}
             </span>
             ,{" "}
             <span className="bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] bg-clip-text text-transparent">
-              {t("hero.role")}
+              {t("home_page.hero.role")}
             </span>
           </h1>
 
           <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
-            {t("hero.description")}
+            {t("home_page.hero.description")}
           </p>
 
           <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
@@ -42,14 +42,14 @@ export const Hero = () => {
               className="w-full md:w-auto"
               onClick={() => scrollToSelectedSection("my-story")}
             >
-              {t("hero.my_story_btn")}
+              {t("home_page.hero.my_story_btn")}
             </Button>
             <Button
               className="w-full md:w-auto"
               onClick={() => scrollToSelectedSection("hire")}
               disabled
             >
-              {t("hero.hire_btn")}
+              {t("home_page.hero.hire_btn")}
             </Button>
           </div>
         </div>

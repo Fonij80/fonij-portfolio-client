@@ -14,15 +14,15 @@ import {
 import { Menu } from "lucide-react";
 import { NavigationLink, Logo } from "@/components/ui/extra";
 import { ModeToggle, LanguageToggle } from "@/components/ui/extra";
-
-const routeList = [
-  { href: "/contact", labelKey: "contact" },
-  { href: "/blog", labelKey: "blog" },
-  { href: "/", labelKey: "home" },
-];
+import { appRoutes } from "@/constants/routes";
+import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const routeList = appRoutes.filter((route) => route.labelKey);
+  const { i18n } = useTranslation();
+  const dir = i18n.dir(); // returns 'rtl' or 'ltr'
+  const navFlexDirection = dir === "rtl" ? "flex-row-reverse" : "flex-row";
 
   return (
     <header className="sticky top-0 pt-5 pb-5 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
@@ -37,7 +37,7 @@ export const Navbar = () => {
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Menu Icon</span>
               </SheetTrigger>
-              <SheetContent side="left">
+              <SheetContent side={dir === "rtl" ? "left" : "right"}>
                 {/* Accessible header and description for screen readers */}
                 <SheetHeader className="flex flex-col items-center justify-center">
                   <SheetTitle className="text-lg font-bold text-center">
@@ -48,35 +48,35 @@ export const Navbar = () => {
                   </SheetDescription>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
-                  {routeList.map(({ href, labelKey }) => (
+                  {routeList.map(({ path, labelKey }) => (
                     <NavigationLink
-                      key={href}
+                      key={path}
                       labelKey={labelKey}
-                      href={href}
+                      href={path}
                       onClick={() => setIsOpen(false)}
                     />
                   ))}
                 </nav>
               </SheetContent>
             </Sheet>
-            <ModeToggle />
             <LanguageToggle />
+            <ModeToggle />
           </div>
 
           {/* Desktop */}
-          <nav className="hidden md:flex gap-2">
-            {routeList.map(({ href, labelKey }) => (
+          <nav className={`hidden md:flex gap-2 ${navFlexDirection}`}>
+            {routeList.map(({ path, labelKey }) => (
               <NavigationLink
-                key={href}
+                key={path}
                 labelKey={labelKey}
-                href={href}
+                href={path}
                 onClick={() => setIsOpen(false)}
               />
             ))}
           </nav>
           <div className="hidden md:flex gap-2 items-center">
-            <ModeToggle />
             <LanguageToggle />
+            <ModeToggle />
           </div>
         </NavigationMenuList>
       </NavigationMenu>
