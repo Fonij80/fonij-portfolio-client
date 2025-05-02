@@ -1,3 +1,4 @@
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { buttonVariants } from "../button";
 import { NavLink } from "react-router-dom";
@@ -21,11 +22,14 @@ export const NavigationLink = ({
       to={href}
       onClick={onClick}
       className={({ isActive }) =>
-        isActive
-          ? `${buttonVariants({
-              variant: "ghost",
-            })} text-secondary-500 border-b-2 border-secondary-500 bg-blue-200 text-lg font-bold`
-          : `${buttonVariants({ variant: "ghost" })} text-base`
+        `${buttonVariants({
+          variant: "ghost",
+        })} text-base font-medium relative py-1 px-3 transition-colors duration-200 
+        ${
+          isActive
+            ? "border-b-2 border-[#BF817F]"
+            : "hover:bg-[#BF817F] hover:text-[#BF817F]"
+        }`
       }
     >
       {t(`navbar.links.${labelKey}`)}

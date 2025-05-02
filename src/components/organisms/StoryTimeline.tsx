@@ -59,7 +59,7 @@ export const StoryTimeline = () => {
   const walkerX = (currentStep / totalSteps) * 100;
 
   return (
-    <div className="w-full px-6 py-12">
+    <div id="my-story" className="w-full px-6 py-12">
       <h2 className="text-3xl font-bold mb-8 text-center">My Story</h2>
 
       <div className="relative h-48 border-t border-gray-300">

@@ -13,8 +13,10 @@
     "hero": {
       "contact_btn": "Contact Me",
       "hire_btn": "Cooperate with Me",
-      "about_btn": "My Story",
-      "title": "I'm Foroozan, a Developer",
+      "my_story_btn": "My Story",
+      "intro": "I'm",
+      "name": "Foroozan Iraji",
+      "role": "Developer",
       "description": "Coder, Environmentalist, Linguaphile, Bibliophile"
     },
     "contact": {
@@ -41,7 +43,7 @@
       }
     },
     "footer": {
-      "copyright": "© {{year}} Portfolio made by <creator>Fonij</creator>, Inspired by <inspiration>Leo Miranda's Landing page</inspiration>"
+      "copyright": "© {{year}} Portfolio made by <creator>Fonij</creator>"
     }
   },
   "fa": {
@@ -58,8 +60,10 @@
     "hero": {
       "contact_btn": "ارتباط با من",
       "hire_btn": "همکاری با من",
-      "about_btn": "داستان من",
-      "title": "",
+      "my_story_btn": "داستان من",
+      "intro": "من",
+      "name": "فروزان ایرجی",
+      "role": "توسعه‌دهنده",
       "description": "من یه برنامه‌نویسم که عاشق کد زدنم. تفریحم کتاب خوندن و یاد گرفتن زبان‌های مختلفه. همیشه سعی می‌کنم جوری رفتار کنم که کمترین آسیب به محیط‌زیست برسه."
     },
     "contact": {
@@ -86,7 +90,7 @@
       }
     },
     "footer": {
-      "copyright": "© {{year}}  ساخته شده توسط <creator>Fonij</creator>، الهام گرفته از <inspiration>Leo Miranda's Landing page</inspiration>"
+      "copyright": "© {{year}}  ساخته شده توسط <creator>Fonij</creator>"
     }
   }
 }

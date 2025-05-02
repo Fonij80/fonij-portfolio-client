@@ -37,7 +37,7 @@ export const ContactForm = () => {
           هر چی دل تنگت میخواد بگو!
         </CardTitle>
         <CardDescription className="text-sm text-muted-foreground">
-          خوشحال می‌شم پیامت رو دریافت کنم.
+          پیامت مستقیم میرسه به دست خودم :)
         </CardDescription>
       </CardHeader>
       <CardContent>

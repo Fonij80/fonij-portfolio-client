@@ -1,77 +1,56 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
+  SheetTitle,
+  SheetDescription,
   SheetTrigger,
 } from "@/components/ui/sheet";
-// import { buttonVariants } from "../../atoms/button";
 import { Menu } from "lucide-react";
 import { NavigationLink, Logo } from "@/components/ui/extra";
 import { ModeToggle, LanguageToggle } from "@/components/ui/extra";
-// import { Logo } from "../../atoms";
 
-interface RouteProps {
-  href: string;
-  labelKey: string;
-}
-
-const routeList: RouteProps[] = [
-  {
-    href: "/",
-    labelKey: "home",
-  },
-  {
-    href: "/blog",
-    labelKey: "blog",
-  },
-  {
-    href: "/contact",
-    labelKey: "contact",
-  },
+const routeList = [
+  { href: "/contact", labelKey: "contact" },
+  { href: "/blog", labelKey: "blog" },
+  { href: "/", labelKey: "home" },
 ];
 
 export const Navbar = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky border-b-[1px] top-0 pt-5 pb-5 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
+    <header className="sticky top-0 pt-5 pb-5 z-40 w-full bg-white dark:border-b-slate-700 dark:bg-background">
       <NavigationMenu className="mx-auto">
-        <NavigationMenuList className="container h-14 px-4 w-screen flex justify-between rtl:flex-row-reverse">
+        <NavigationMenuList className="container h-14 px-4 w-screen flex items-center justify-between rtl:flex-row-reverse">
           <Logo />
 
-          {/* mobile */}
-          <span className="flex md:hidden">
-            <LanguageToggle />
-            <ModeToggle />
-
+          {/* Mobile */}
+          <div className="flex items-center gap-2 md:hidden">
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger className="px-2">
-                <Menu
-                  className="flex md:hidden h-5 w-5"
-                  onClick={() => setIsOpen(true)}
-                >
-                  <span className="sr-only">Menu Icon</span>
-                </Menu>
+              <SheetTrigger className="p-2">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Menu Icon</span>
               </SheetTrigger>
-
-              <SheetContent side={"left"}>
-                <SheetHeader>
-                  {/* TODO Add a Header for mobile drawer */}
+              <SheetContent side="left">
+                {/* Accessible header and description for screen readers */}
+                <SheetHeader className="flex flex-col items-center justify-center">
+                  <SheetTitle className="text-lg font-bold text-center">
+                    منو
+                  </SheetTitle>
+                  <SheetDescription className="sr-only">
+                    منوی ناوبری برنامه
+                  </SheetDescription>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">
-                  {routeList.map(({ href, labelKey }: RouteProps) => (
+                  {routeList.map(({ href, labelKey }) => (
                     <NavigationLink
+                      key={href}
                       labelKey={labelKey}
                       href={href}
                       onClick={() => setIsOpen(false)}
@@ -80,22 +59,24 @@ export const Navbar = () => {
                 </nav>
               </SheetContent>
             </Sheet>
-          </span>
+            <ModeToggle />
+            <LanguageToggle />
+          </div>
 
-          {/* desktop */}
+          {/* Desktop */}
           <nav className="hidden md:flex gap-2">
-            {routeList.map(({ href, labelKey }: RouteProps) => (
+            {routeList.map(({ href, labelKey }) => (
               <NavigationLink
+                key={href}
                 labelKey={labelKey}
                 href={href}
                 onClick={() => setIsOpen(false)}
               />
             ))}
           </nav>
-
           <div className="hidden md:flex gap-2 items-center">
-            <LanguageToggle />
             <ModeToggle />
+            <LanguageToggle />
           </div>
         </NavigationMenuList>
       </NavigationMenu>

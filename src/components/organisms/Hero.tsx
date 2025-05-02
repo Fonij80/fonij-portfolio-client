@@ -1,80 +1,67 @@
-import WorldMap from "react-svg-worldmap";
 import myImage from "@/assets/images/profile_image.png";
 import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
+import { CustomWorldMap } from "@/components/ui/extra";
 
 export const Hero = () => {
   const { t } = useTranslation();
 
-  const data = [{ country: "ir", value: 1 }];
-
   const scrollToSelectedSection = (sectionName: string) => {
     const section = document.getElementById(sectionName);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    }
+    if (section) section.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
-    <section className="relative h-screen w-full">
-      {/* <CustomWorldMap /> */}
+    <section className="relative h-screen w-full flex">
+      {/* Background Map */}
       <div className="absolute inset-0 -z-10 flex items-center justify-center">
-        <WorldMap
-          color="#BF817F"
-          backgroundColor={"transparent"}
-          borderColor="#BF817F"
-          size="xxl"
-          data={data}
-        />
+        <CustomWorldMap />
       </div>
 
-      <div className="container grid lg:grid-cols-2 place-items-center py-20 md:py-32 gap-10 relative z-10">
-        {/* <HeroContent /> */}
-        <div className="text-center lg:text-start space-y-6">
-          <main className="text-5xl md:text-6xl font-bold">
-            <h1 className="inline">
-              I'm{" "}
-              <span className="inline bg-gradient-to-r from-[#F596D3] to-[#D247BF] text-transparent bg-clip-text">
-                Foroozan Iraji
-              </span>
-              , a
-            </h1>{" "}
-            <h2 className="inline">
-              <span className="inline bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] text-transparent bg-clip-text">
-                Developer
-              </span>
-            </h2>
-          </main>
+      {/* Main Content */}
+      <div className="container mx-auto flex flex-col-reverse lg:grid lg:grid-cols-2 items-center pt-16 pb-10 gap-10 relative z-10 text-center">
+        {/* Text Section */}
+        <div className="space-y-6 w-full lg:text-start">
+          <h1 className="text-5xl md:text-6xl font-bold">
+            {t("hero.intro")}{" "}
+            <span className="bg-gradient-to-r from-[#F596D3] to-[#D247BF] bg-clip-text text-transparent">
+              {t("hero.name")}
+            </span>
+            ,{" "}
+            <span className="bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] bg-clip-text text-transparent">
+              {t("hero.role")}
+            </span>
+          </h1>
 
           <p className="text-xl text-muted-foreground md:w-10/12 mx-auto lg:mx-0">
             {t("hero.description")}
           </p>
 
-          <div className="space-y-4 md:space-y-0 md:space-x-4">
+          <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
             <Button
-              className="w-full md:w-1/3"
-              onClick={() => scrollToSelectedSection("hire")}
-              disabled={true}
+              className="w-full md:w-auto"
+              onClick={() => scrollToSelectedSection("my-story")}
             >
-              {t("hero.hire_btn")}
+              {t("hero.my_story_btn")}
             </Button>
             <Button
-              className="w-full md:w-1/3"
-              onClick={() => scrollToSelectedSection("about")}
+              className="w-full md:w-auto"
+              onClick={() => scrollToSelectedSection("hire")}
+              disabled
             >
-              {t("hero.about_btn")}
+              {t("hero.hire_btn")}
             </Button>
           </div>
         </div>
 
-        {/* <ProfileImage /> */}
-        <div className="z-10 rounded-full overflow-hidden w-96 h-auto mx-auto lg:ml-80">
+        {/* Profile Image Section */}
+        <div className="w-72 h-72 rounded-full overflow-hidden justify-self-center">
           <img
             src={myImage}
             alt="Foroozan Iraji"
             className="object-cover w-full h-full"
           />
         </div>
-        <div className="shadow"></div>
       </div>
     </section>
   );
