@@ -18,10 +18,11 @@ import { appRoutes } from "@/constants/routes";
 import { useTranslation } from "react-i18next";
 
 export const Navbar = () => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const routeList = appRoutes.filter((route) => route.labelKey);
   const { i18n } = useTranslation();
-  const dir = i18n.dir(); // returns 'rtl' or 'ltr'
+  const dir = i18n.dir();
   const navFlexDirection = dir === "rtl" ? "flex-row-reverse" : "flex-row";
 
   return (
@@ -41,10 +42,10 @@ export const Navbar = () => {
                 {/* Accessible header and description for screen readers */}
                 <SheetHeader className="flex flex-col items-center justify-center">
                   <SheetTitle className="text-lg font-bold text-center">
-                    منو
+                    {t("navbar.title")}
                   </SheetTitle>
                   <SheetDescription className="sr-only">
-                    منوی ناوبری برنامه
+                    {t("navbar.description")}
                   </SheetDescription>
                 </SheetHeader>
                 <nav className="flex flex-col justify-center items-center gap-2 mt-4">

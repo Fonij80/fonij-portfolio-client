@@ -42,9 +42,9 @@ export const Blog = () => {
     <section className="max-w-7xl mx-auto px-2 sm:px-4 py-24 sm:py-32">
       <div className="flex flex-col lg:flex-row gap-6">
         {/* Sidebar */}
-        <aside className="lg:w-[30%] w-full lg:sticky lg:top-24 h-fit hidden lg:block">
+        {/* <aside className="lg:w-[30%] w-full lg:sticky lg:top-24 h-fit hidden lg:block">
           <Newsletter />
-        </aside>
+        </aside> */}
 
         {/* Main Content */}
         <main className="flex-1">
@@ -112,9 +112,9 @@ export const Blog = () => {
           </div>
 
           {/* Mobile Newsletter */}
-          <div className="lg:hidden mt-8">
+          {/* <div className="lg:hidden mt-8">
             <Newsletter />
-          </div>
+          </div> */}
         </main>
       </div>
     </section>

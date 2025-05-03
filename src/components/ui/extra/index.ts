@@ -5,3 +5,4 @@ export { ModeToggle } from "./ModeToggle";
 export { SocialLink } from "./SocialLink";
 export { ScrollToTop } from "./ScrollToTop";
 export { CustomWorldMap } from "./CustomWorldMap";
+export { CustomToast } from "./CustomToast";

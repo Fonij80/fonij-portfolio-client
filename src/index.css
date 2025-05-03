@@ -123,3 +123,95 @@
 body {
   font-family: "Vazirmatn", sans-serif;
 }
+
+/* HeroCards background shadow */
+.shadow {
+  position: absolute;
+  background: hsl(var(--primary) / 0%);
+  border-radius: 50px;
+  rotate: 180deg;
+  z-index: -1;
+  width: 260px;
+  top: 200px;
+  height: 200px;
+  filter: blur(150px);
+  will-change: transform;
+  animation: shadow-slide infinite 4s linear alternate;
+}
+
+@keyframes shadow-slide {
+  from {
+    background: hsl(var(--primary) / 20%);
+    left: 0;
+  }
+
+  to {
+    background: hsl(var(--primary) / 80%);
+    left: calc(100vw - 700px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .shadow {
+    top: 70px;
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: hsl(var(--primary) / 20%);
+      left: 0;
+    }
+
+    to {
+      background: hsl(var(--primary) / 50%);
+      left: calc(100vw - 20px);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .shadow {
+    top: 70px;
+    width: 100px;
+    height: 50px;
+    filter: blur(60px);
+  }
+
+  @keyframes shadow-slide {
+    from {
+      background: hsl(var(--primary) / 20%);
+      left: 0;
+    }
+
+    to {
+      background: hsl(var(--primary) / 30%);
+      left: calc(100vw - 100px);
+    }
+  }
+}
+
+.shadow-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  animation: moveShadow 5s infinite;
+}
+
+@keyframes moveShadow {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-40%, -60%) scale(1.2);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
