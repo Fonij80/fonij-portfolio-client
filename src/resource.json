@@ -25,7 +25,9 @@
         "role": "a Developer",
         "description": "Coder, Environmentalist, Linguaphile, Bibliophile"
       },
-      "my_story": {}
+      "my_story": {
+        "title": "My Story"
+      }
     },
     "blog_page": {
       "newsletter": {
@@ -71,10 +73,12 @@
         "intro": "",
         "name": "فروزان ایرجی ",
         "verb": "هستم، ",
-        "role": "یه توسعه‌دهنده",
-        "description": "من یه برنامه‌نویسم که عاشق کد زدنم. تفریحم کتاب خوندن و یاد گرفتن زبان‌های مختلفه. همیشه سعی می‌کنم جوری رفتار کنم که کمترین آسیب به محیط‌زیست برسه."
+        "role": "یه برنامه‌نویس",
+        "description": "یه برنامه‌نویس که عاشق کد زدن و تبدیل کردن ایده‌هاش به نرم‌افزاره. تفریحم کتاب خواندن و یاد گرفتن زبان‌های مختلفه."
       },
-      "my_story": {}
+      "my_story": {
+        "title": "داستان من"
+      }
     },
     "blog_page": {
       "newsletter": {

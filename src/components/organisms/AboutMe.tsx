@@ -17,13 +17,13 @@ export const AboutMe = () => {
       <main className="text-4xl md:text-5xl font-bold max-w-3xl mx-auto">
         <h1>
           {t("home_page.hero.intro")}{" "}
-          <span className="bg-gradient-to-r from-[#F596D3] to-[#D247BF] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-[#dab4f5] to-[#4B0082] bg-clip-text text-transparent">
             {t("home_page.hero.name")}
           </span>
           {t("home_page.hero.verb")}
-          <span className="bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] bg-clip-text text-transparent">
+          {/* <span className="bg-gradient-to-r from-[#61DAFB] via-[#1fc0f1] to-[#03a3d7] bg-clip-text text-transparent">
             {t("home_page.hero.role")}
-          </span>
+          </span> */}
         </h1>
       </main>
 
@@ -38,33 +38,33 @@ export const AboutMe = () => {
         >
           {t("home_page.hero.my_story_btn")}
         </Button>
-        <Button
+        {/* <Button
           className="w-full md:w-1/3"
           onClick={() => scrollToSelectedSection("hore")}
           disabled
         >
           {t("home_page.hero.hire_btn")}
-        </Button>
+        </Button> */}
       </div>
       <div className="flex flex-row gap-6 mt-6">
         <SocialLink
           href={personal_data.social_links.youtube}
           label="YouTube"
-          className="text-red-600 hover:text-red-800"
+          // className="text-red-600 hover:text-red-800"
         >
           <FaYoutube size={40} />
         </SocialLink>
         <SocialLink
           href={personal_data.social_links.linkedin}
           label="LinkedIn"
-          className="text-blue-600 hover:text-blue-800"
+          // className="text-blue-600 hover:text-blue-800"
         >
           <FaLinkedin size={40} />
         </SocialLink>
         <SocialLink
           href={personal_data.social_links.github}
           label="Github"
-          className="text-gray-800 hover:text-gray-600"
+          // className="text-gray-800 hover:text-gray-600"
         >
           <FaGithub size={40} />
         </SocialLink>

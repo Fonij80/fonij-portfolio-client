@@ -13,7 +13,7 @@ export const Hero = () => {
         <AboutMe />
 
         {/* Profile Image */}
-        <div className="rounded-full overflow-hidden w-96 h-auto">
+        <div className="overflow-hidden w-110 h-auto">
           <img
             src={myImage}
             alt="Foroozan Iraji"

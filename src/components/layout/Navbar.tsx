@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   NavigationMenu,
   NavigationMenuList,
@@ -55,6 +55,7 @@ export const Navbar = () => {
                       labelKey={labelKey}
                       href={path}
                       onClick={() => setIsOpen(false)}
+                      disabled={labelKey === "blog" || labelKey === "tutorial"}
                     />
                   ))}
                 </nav>
@@ -72,6 +73,7 @@ export const Navbar = () => {
                 labelKey={labelKey}
                 href={path}
                 onClick={() => setIsOpen(false)}
+                disabled={labelKey === "blog" || labelKey === "tutorial"}
               />
             ))}
           </nav>

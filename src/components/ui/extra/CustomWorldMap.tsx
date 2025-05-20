@@ -1,4 +1,9 @@
+import type { Data } from "react-svg-worldmap";
 import WorldMap from "react-svg-worldmap";
+
+const data: Data = [
+  { country: "ir", value: 1 }, // Iran
+];
 
 export const CustomWorldMap = () => {
   return (
@@ -7,7 +12,7 @@ export const CustomWorldMap = () => {
       backgroundColor="transparent"
       borderColor="#BF817F"
       size="xxl"
-      data={[{ country: "ir", value: 1 }]}
+      data={data}
     />
   );
 };

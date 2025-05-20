@@ -1,18 +1,15 @@
 import { Trans } from "react-i18next";
-import { SocialLink } from "../ui/extra";
-import { FaYoutube, FaTwitter, FaInstagram } from "react-icons/fa";
-import personal_data from "@/constants/personal_data.json";
 
 export const Footer = () => {
   return (
     <footer
       id="footer"
-      className="flex flex-col items-center justify-center text-center mt-10"
+      className="flex flex-col items-center justify-center text-center mt-10 mb-5"
     >
       <hr className="w-full" />
 
       <section className="container mt-5">
-        <div className="flex gap-4 justify-center mb-4">
+        {/* <div className="flex gap-4 justify-center mb-4">
           <SocialLink
             href={personal_data.social_links.youtube}
             label="YouTube"
@@ -34,7 +31,7 @@ export const Footer = () => {
           >
             <FaInstagram />
           </SocialLink>
-        </div>
+        </div> */}
 
         <h3>
           <Trans

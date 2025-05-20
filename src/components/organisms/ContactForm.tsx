@@ -101,7 +101,7 @@ export const ContactForm = () => {
           <Button
             type="submit"
             className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition transform hover:scale-105"
-            disabled={submitting}
+            disabled={true}
           >
             {submitting
               ? t("contact_page.loading_btn")
