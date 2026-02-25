@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { cx } from "class-variance-authority";
-import logoImage from "@/assets/brand-logo.svg";
+import logoImage from "@/assets/brand-logo.png";
 import { useTranslation } from "react-i18next";
 
 interface LogoProps {

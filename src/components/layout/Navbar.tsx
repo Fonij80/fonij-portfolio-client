@@ -63,7 +63,6 @@ export const Navbar = ({
   const location = useLocation();
   const [open, setOpen] = React.useState(false);
 
-  // ✅ Smart defaults with priority
   const defaultLinks = getNavLinks(ROUTES);
   const finalLinks = propLinks || defaultLinks;
 

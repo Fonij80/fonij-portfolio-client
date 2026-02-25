@@ -1,7 +1,8 @@
-import { Github, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import { FaGithub, FaLinkedin, FaTelegram } from "react-icons/fa";
 
 type SocialLink = {
   label: string;
@@ -57,8 +58,18 @@ const DEFAULT_SECTIONS: FooterSection[] = [
 const DEFAULT_SOCIAL: SocialLink[] = [
   {
     label: "GitHub",
+    href: "https://github.com/Fonij80",
+    icon: <FaGithub className="h-4 w-4" />,
+  },
+  {
+    label: "Telegran",
     href: "https://github.com/yourusername/fonij-react",
-    icon: <Github className="h-4 w-4" />,
+    icon: <FaTelegram className="h-4 w-4" />,
+  },
+  {
+    label: "Linkedin",
+    href: "https://www.linkedin.com/in/foroozan-iraji",
+    icon: <FaLinkedin className="h-4 w-4" />,
   },
 ];
 
@@ -69,26 +80,26 @@ export const Footer = ({
   contact = {},
   newsletter,
   className,
-  showSections = true,
+  showSections = false,
   showSocial = true,
-  showContact = true,
-  showNewsletter = true,
+  showContact = false,
+  showNewsletter = false,
   showCopyright = true,
 }: FooterProps) => {
   return (
-    <footer className={cn("w-full border-t bg-background", className)}>
+    <footer className={cn("w-full bg-background", className)}>
       {/* Main Content */}
       <div className="container mx-auto px-4 py-12 lg:px-6">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {/* Brand + Contact */}
           <div className="lg:col-span-1">
-            <div className="mb-6">
+            {/* <div className="mb-6">
               {brand ?? (
                 <div className="flex items-center gap-2 text-xl font-bold">
                   Fonij
                 </div>
               )}
-            </div>
+            </div> */}
 
             {showContact && Object.values(contact).some(Boolean) && (
               <div className="space-y-2 text-sm text-muted-foreground">
@@ -157,8 +168,7 @@ export const Footer = ({
         <div className="border-t bg-background/50 py-6">
           <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 md:flex-row lg:px-6">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()}. {brand ?? "Fonij React"}. All rights
-              reserved.
+              Built by humans (mostly)!
             </p>
 
             {showSocial && socialLinks.length > 0 && (

@@ -1,11 +1,4 @@
-import {
-  Home,
-  LandingPage,
-  BlogListPage,
-  BlogPostPage,
-  BlogCMSPage,
-} from "../pages";
-import { LANDING_VARIANTS } from "../pages/landings/config";
+import { Home, BlogListPage, BlogPostPage, BlogCMSPage } from "../pages";
 
 type RouteConfig = {
   path: string;
@@ -45,11 +38,4 @@ export const ROUTES: RouteConfig[] = [
     label: "Blog CMS",
     nav: false, // protect this with your auth later
   },
-
-  ...LANDING_VARIANTS.map((landing) => ({
-    path: landing.path,
-    element: <LandingPage />,
-    label: landing.title,
-    nav: false,
-  })),
 ];

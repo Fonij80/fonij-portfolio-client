@@ -1,11 +1,21 @@
 import { Footer, Navbar, ScrollToTop } from "@/components";
+import { cn } from "@/lib/utils";
+import { useTranslation } from "react-i18next";
 import { Outlet, ScrollRestoration } from "react-router-dom";
 
 export const Layout = () => {
+  const { i18n } = useTranslation();
+
   return (
-    <div className="min-h-screen bg-background">
+    <div
+      className={cn(
+        "min-h-screen flex flex-col antialiased",
+        i18n.language === "fa" && "font-vazir dir-rtl",
+      )}
+      dir={i18n.dir()}
+    >
       <Navbar />
-      <main className="container mx-auto p-8">
+      <main className="relative z-10 flex-1">
         <Outlet />
       </main>
       <Footer />

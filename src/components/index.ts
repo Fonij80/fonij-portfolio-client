@@ -14,3 +14,10 @@ export { BlogList } from "./sections/blog/BlogList";
 export { BlogPostCard } from "./sections/blog/BlogPostCard";
 export { BlogPostForm } from "./sections/blog/BlogPostForm";
 export { BlogPost } from "./sections/blog/BlogPost";
+
+// -------------------- home --------------------
+export { HeroHome } from "./home/HeroHome";
+export { AboutMe } from "./home/AboutMe";
+export { Experiences } from "./home/Experiences";
+export { Projects } from "./home/Projects";
+export { Skills } from "./home/Skills";

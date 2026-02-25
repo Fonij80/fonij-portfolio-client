@@ -1,6 +1,10 @@
 // -------------------- buttons --------------------
 export { ScrollToTop } from "./buttons/ScrollToTop";
 
+// -------------------- links --------------------
+export { NavigationLink } from "./links/NavigationLink";
+export { SocialLink } from "./links/SocialLink";
+
 // // -------------------- icons --------------------
 // export { PrivacyNoticeIcon } from "./icons/PrivacyNoticeIcon";
 export { Logo } from "./icons/Logo";
