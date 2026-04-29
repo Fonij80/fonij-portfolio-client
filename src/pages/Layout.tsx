@@ -1,4 +1,4 @@
-import { Footer, Navbar, ScrollToTop } from "@/components";
+import { Footer, ScrollToTop } from "@/components";
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
 import { Outlet, ScrollRestoration } from "react-router-dom";
@@ -14,8 +14,7 @@ export const Layout = () => {
       )}
       dir={i18n.dir()}
     >
-      <Navbar />
-      <main className="relative z-10 flex-1">
+      <main className="flex-1">
         <Outlet />
       </main>
       <Footer />

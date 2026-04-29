@@ -1,38 +1,39 @@
-import { useState, useEffect } from "react";
-import { Button } from "../../button";
+import { useEffect, useState } from "react";
 import { ArrowUpToLine } from "lucide-react";
+import { Button } from "../../button";
 
 export const ScrollToTop = () => {
   const [showTopBtn, setShowTopBtn] = useState(false);
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 400) {
-        setShowTopBtn(true);
-      } else {
-        setShowTopBtn(false);
-      }
-    });
+    const handleScroll = () => {
+      setShowTopBtn(window.scrollY > 400);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const goToTop = () => {
-    window.scroll({
+    window.scrollTo({
       top: 0,
       left: 0,
+      behavior: "smooth",
     });
   };
 
-  return (
-    <>
-      {showTopBtn && (
-        <Button
-          onClick={goToTop}
-          className="fixed bottom-4 right-4 opacity-90 shadow-md"
-          size="icon"
-        >
-          <ArrowUpToLine className="h-4 w-4" />
-        </Button>
-      )}
-    </>
-  );
+  return showTopBtn ? (
+    <Button
+      onClick={goToTop}
+      className="fixed bottom-4 right-4 z-50 opacity-90 shadow-md transition-all duration-300 hover:-translate-y-1 hover:opacity-100"
+      size="icon"
+      aria-label="Scroll to top"
+    >
+      <ArrowUpToLine className="h-4 w-4" />
+    </Button>
+  ) : null;
 };

@@ -8,7 +8,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
-import { languages } from "@/constants/supported-languages";
+import { languages } from "@/configs";
 
 export const LanguageToggle = () => {
   const { i18n } = useTranslation();

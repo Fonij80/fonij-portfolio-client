@@ -1,12 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
-import { ROUTES } from "@/constants/routes";
-import { Layout } from "@/pages/Layout";
-import { NotFound } from "../pages";
+import { ROUTES } from "@/configs/routes.config";
+import { NotFoundPage, Layout } from "@/pages";
 
-const basename =
-  import.meta.env.BASE_URL === "/fonij-react-template/"
-    ? "/fonij-react-template/"
-    : "/";
+const basename = import.meta.env.BASE_URL?.replace(/^\.\//, "/") || "/";
 
 const router = createBrowserRouter(
   [
@@ -27,7 +23,7 @@ const router = createBrowserRouter(
     },
     {
       path: "*",
-      element: <NotFound />,
+      element: <NotFoundPage />,
     },
   ],
   {

@@ -4,13 +4,15 @@ import LanguageDetector from "i18next-browser-languagedetector";
 
 import enCommon from "@/locales/en/common.json";
 import faCommon from "@/locales/fa/common.json";
+import enHeader from "@/locales/en/header.json";
+import enFooter from "@/locales/en/footer.json";
 
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
-      en: { common: enCommon },
+      en: { common: enCommon, header: enHeader, footer: enFooter },
       fa: { common: faCommon },
     },
     lng: "en",

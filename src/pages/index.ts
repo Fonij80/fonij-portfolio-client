@@ -1,9 +1,7 @@
-export { NotFound } from "./errors/NotFound";
+export { LandingPage } from "./LandingPage";
+export { WorkWithMePage } from "./WorkWithMePage";
+export { BlogPostPage } from "./BlogPostPage";
+export { PromptryPage } from "./PromptryPage";
+export { NotFoundPage } from "./NotFoundPage";
 
-// ---------- landings ----------
-export { Home } from "./landings/Home";
-
-// ---------- blog ----------
-export { BlogListPage } from "./blog/BlogListPage";
-export { BlogPostPage } from "./blog/BlogPostPage";
-export { BlogCMSPage } from "./blog/BlogCMSPage";
+export { Layout } from "./Layout";

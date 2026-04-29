@@ -1,6 +1,6 @@
 {
-  "name": "fonij-react-template",
-  "homepage": "https://fonij80.github.io/fonij-react-template",
+  "name": "fonij-portfolio-client",
+  "homepage": "https://fonij80.github.io/fonij-portfolio-client",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -14,6 +14,9 @@
   "dependencies": {
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.34.0",
+    "front-matter": "^4.0.2",
+    "gray-matter": "^4.0.3",
     "i18next": "^25.8.5",
     "i18next-browser-languagedetector": "^8.2.0",
     "i18next-http-backend": "^3.0.2",
@@ -23,7 +26,9 @@
     "react-dom": "^19.2.0",
     "react-i18next": "^16.5.4",
     "react-icons": "^5.5.0",
+    "react-markdown": "^10.1.0",
     "react-router-dom": "^7.13.0",
+    "remark-gfm": "^4.0.1",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {

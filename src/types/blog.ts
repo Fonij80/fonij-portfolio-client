@@ -1,14 +1,33 @@
-export type BlogPostStatus = "draft" | "published";
+export type BlogCategory = "all" | "business" | "marketing" | "computer";
 
-export interface BlogPost {
-  id: string;
+// export type BlogPost = {
+//   id: number;
+//   title: string;
+//   excerpt: string;
+//   category: Exclude<Category, "all">;
+//   date: string;
+//   readTime: string;
+//   slug: string;
+// };
+
+export type BlogPostMeta = {
   slug: string;
   title: string;
   excerpt: string;
-  content: string;
+  category: Exclude<BlogCategory, "all">;
+  publishedAt: string;
+  readTime: string;
   coverImage?: string;
-  tags: string[];
-  status: BlogPostStatus;
-  createdAt: string; // ISO
-  updatedAt: string; // ISO
-}
+  coverImageAlt?: string;
+};
+
+export type BlogSection = {
+  id: string;
+  title: string;
+  content: string;
+};
+
+export type BlogPost = BlogPostMeta & {
+  content: string;
+  sections: BlogSection[];
+};
